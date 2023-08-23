@@ -47,8 +47,6 @@ start:
     mov ss, ax
     mov sp, 0x7C00              ; stack grows downwards from where we are loaded in memory
 
-    ; some BIOSes might start us at 07C0:0000 instead of 0000:7C00, make sure we are in the
-    ; expected location
     push es
     push word .after
     retf
